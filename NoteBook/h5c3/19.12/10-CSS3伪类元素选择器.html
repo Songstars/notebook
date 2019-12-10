@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 为元素和标签元素一样 权重为1 */
+        
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        
+        div::before {
+            content: "我是";
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        
+        div::after {
+            content: "的爸爸";
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        div盒子
+    </div>
+</body>
+
+</html>

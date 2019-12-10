@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 谷歌游览器把autoplay属性给禁用了 -->
+    <!-- <audio src="media/qhc.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio> -->
+    <!-- 因为不同的游览器支持不同的格式,我们的解决方案是为这个音频准备多个格式 -->
+    <audio>
+        <source src="media/qhc.mp3" type="audio/mpeg">
+        <source src="media/qhc.ogg" type="audio/ogg">
+            您的游览器不支持audio播放
+    </audio>
+</body>
+
+</html>

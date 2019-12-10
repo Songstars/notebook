@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* div :nth-child(1) {
+            background-color: pink;
+        }
+        
+        div :nth-child(2) {
+            background-color: red;
+        } */
+        /* 这个选不到 */
+        
+        结构伪类选择器权重也是10 div span:nth-child(1) {
+            background-color: pink;
+        }
+        
+        div span:nth-child(2) {
+            background-color: pink;
+        }
+        /* 总结   :nth-child(n)选择父元素里面的第n个孩子,他不管里面里面的孩子是否同一个类型 */
+        /* of-type  选择指定类型的元素 */
+        
+        div span:first-of-type {
+            background-color: purple;
+        }
+        
+        div span:last-of-type {
+            background-color: skyblue;
+        }
+        
+        div span:nth-of-type(2) {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>p标签</p>
+        <span>span标签</span>
+        <span>span标签</span>
+        <span>span标签</span>
+        <!-- ul 里面我们只允许放li    所以nth-child和nth-of-type就不一样了 -->
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
