@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            /* overflow: hidden; */
+            background-color: #ccc;
+        }
+        
+        .hill {
+            position: absolute;
+            bottom: 0;
+            width: 1536px;
+            height: 336px;
+            background: url(media/bg1.png);
+            /* background-color: pink; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: hill 20s linear infinite forwards;
+        }
+        
+        .bear {
+            position: absolute;
+            bottom: 0;
+            width: 200px;
+            height: 100px;
+            background: url(media/bear.png) no-repeat;
+            /* 我们元素可以添加多种动画 用逗号分开 */
+            animation: bear 1s steps(8) infinite, move 5s forwards;
+        }
+        /* bear动画效果 */
+        
+        @keyframes bear {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -1600px 0;
+            }
+        }
+        
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+        /* bear动画效果 */
+        /* 小山动画 */
+        
+        @keyframes hill {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -3840px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="hill"></div>
+        <div class="bear"></div>
+    </div>
+</body>
+
+</html>

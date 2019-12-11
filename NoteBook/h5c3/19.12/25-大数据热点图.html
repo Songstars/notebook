@@ -1,0 +1,110 @@
+~
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+        
+        .map {
+            position: relative;
+            width: 747px;
+            height: 617px;
+            background: url(media/map.png);
+            margin: 0 auto;
+        }
+        
+        .city {
+            position: absolute;
+            top: 227px;
+            right: 193px;
+            color: #fff;
+        }
+        
+        .tb {
+            /* 一定要用top right   有top和bottom 优先执行top */
+            top: 500px;
+            right: 80px;
+        }
+        
+        .gz {
+            /* 一定要用top right   有top和bottom 优先执行top */
+            top: 542px;
+            right: 191px;
+        }
+        
+        .dotted {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 50%;
+        }
+        
+        .city div[class^="pulse"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+            animation: pulse 1.5s linear infinite;
+        }
+        
+        .city div.pulse2 {
+            animation-delay: 0.4s;
+        }
+        
+        .city div.pulse3 {
+            animation-delay: 0.8s;
+        }
+        /* 添加动画 */
+        
+        @keyframes pulse {
+            0% {}
+            70% {
+                /* 不用scale  因为他会让我们的阴影变大 */
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+            100% {
+                width: 60px;
+                height: 60px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city tb">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city gz">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* x就是x轴 y就是y轴上移动位置 用逗号分开 */
+            /* transform: translate(x,y); */
+            /* transform: translate(100px, 100px); */
+            /* 我们只移动x轴坐标 */
+            /* transform: translateX(50px); */
+            /* 我们只移动y轴坐标 */
+            /* transform: translateY(50px); */
+            /* transform: translate(0, 100px); */
+        }
+        
+        div:first-child {
+            transform: translate(30px, 50px);
+        }
+        
+        div:last-child {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 249px;
+            height: 35px;
+            border: 1px solid #000;
+        }
+        /* after是行内元素没有大小 需要转换为块元素  因为有定位 所以不用加 */
+        
+        div::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #000;
+            border-right: 2px solid #000;
+            transform: rotate(45deg);
+            /* 谁做动画给谁加 */
+            transition: all 0.3s;
+        }
+        
+        div:hover::after {
+            transform: rotate(225deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

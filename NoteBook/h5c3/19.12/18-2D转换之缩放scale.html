@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            transform-origin: left bottom;
+        }
+        
+        div:hover {
+            /* 里面写的数字不跟单位 就是倍数的意思 1 就是1倍 2就是2倍
+        transform: scale(x,y)
+        transform: scale(2,2)
+         */
+            /* 修改宽度为原来的1.5倍，高度不变 */
+            /* transform: scale(1.5, 1); */
+            /* 等比例缩放 */
+            /* transform: scale(5); */
+            /* 小于1就是缩放 */
+            /* transform: scale(0.5, 0.5); */
+            /* 优势不影响其他盒子 */
+            transform: scale(2);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
