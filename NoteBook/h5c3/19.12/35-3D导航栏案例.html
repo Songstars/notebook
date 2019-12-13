@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            margin: 100px;
+        }
+        
+        ul li {
+            float: left;
+            width: 120px;
+            height: 35px;
+            margin: 50px 10px;
+            list-style: none;
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 0.4s;
+        }
+        
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+        
+        .front,
+        .bottom {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .front {
+            background-color: pink;
+            z-index: 1;
+            transform: translateZ(17.5px);
+        }
+        
+        .bottom {
+            background-color: purple;
+            /* 必须先移动后旋转 */
+            transform: translateY(17.5px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+
+        <li>
+            <div class="box">
+                <box class="front">亚瑟</box>
+                <box class="bottom">安其拉</box>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <box class="front">亚瑟</box>
+                <box class="bottom">安其拉</box>
+            </div>
+        </li>
+
+        <li>
+            <div class="box">
+                <box class="front">亚瑟</box>
+                <box class="bottom">安其拉</box>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <box class="front">亚瑟</box>
+                <box class="bottom">安其拉</box>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <box class="front">亚瑟</box>
+                <box class="bottom">安其拉</box>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.v_code {
+    position: relative;
+    width: 145px;
+    height: 288px;
+    /* background-color: pink; */
+    background: url(../images/bg.png);
+    margin: 100px auto;
+    padding: 57px 15px 0;
+    /* background-position: 0 0; */
+}
+
+.e_code img {
+    width: 115px;
+}
+
+.line img {
+    position: absolute;
+    top: 165px;
+    left: 15px;
+    width: 115px;
+    height: 14px;
+    animation: line 4s linear infinite;
+}
+
+
+/* line动画 */
+
+@keyframes line {
+    0% {
+        top: 165px;
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 165px;
+    }
+}
