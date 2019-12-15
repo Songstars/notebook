@@ -1,0 +1,44 @@
+!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            /* 父级添加flex属性 */
+            display: flex;
+            width: 800px;
+            height: 300px;
+            background-color: pink;
+            /* 默认主轴是x轴  行row 那么y轴是侧轴 */
+            /* 默认元素是跟着主轴排列的 */
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            /* 我们可以把主轴设置成y轴 那么侧轴就是x轴 */
+            flex-direction: column;
+            /* justify-content: spac e-around; */
+        }
+        
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            /* margin-right: 5px; */
+            /* flex: 1; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+
+</html>
