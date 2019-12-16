@@ -7,4 +7,315 @@ body {
     background: #f2f2f2;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
+    /* height: 2000px; */
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+
+/* 搜索模块 */
+
+.search-index {
+    display: flex;
+    /* 固定的盒子必须有宽度 */
+    /* 固定定位跟父亲没有关系 他以屏幕为准 */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* //兼容性写法 */
+    -webkit-transform: translateX(-50%);
+    width: 100%;
+    min-width: 320px;
+    max-width: 540px;
+    height: 44px;
+    background-color: #f6f6f6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.search {
+    position: relative;
+    flex: 1;
+    height: 26px;
+    line-height: 24px;
+    /* background-color: red; */
+    border: 1px solid #ccc;
+    font-size: 12px;
+    color: #666;
+    margin: 7px 10px;
+    padding-left: 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+}
+
+.search::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/un_ico_home_v620.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+    margin: 5px;
+}
+
+.user {
+    width: 44px;
+    height: 44px;
+    /* background-color: purple; */
+    text-align: center;
+    font-size: 12px;
+    color: #2eaaae;
+}
+
+.user::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/un_ico_home_v620.png) no-repeat -59px -194px;
+    background-size: 104px auto;
+    margin: 4px auto -2px;
+}
+
+
+/* 焦点图 */
+
+.focus {
+    padding-top: 44px;
+}
+
+.focus img {
+    width: 100%;
+}
+
+
+/* 局部导航栏 */
+
+.local-nav {
+    display: flex;
+    height: 64px;
+    /* background-color: pink; */
+    margin: 3px 4px;
+    border-radius: 4px;
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+.local-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+
+.local-nav li [class^="local-nav-icon"] {
+    width: 32px;
+    height: 32px;
+    background-color: purple;
+    margin-top: 8px;
+    background: url(../images/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+
+.local-nav li [class^="local-nav-icon-icon2"] {
+    background-position: 0 -32px;
+}
+
+.local-nav li [class^="local-nav-icon-icon3"] {
+    background-position: 0 -64px;
+}
+
+.local-nav li [class^="local-nav-icon-icon4"] {
+    background-position: 0 -96px;
+}
+
+.local-nav li [class^="local-nav-icon-icon5"] {
+    background-position: 0 -128px;
+}
+
+
+/* nav */
+
+nav {
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+
+.nav-common {
+    display: flex;
+    height: 88px;
+    background-color: pink;
+}
+
+.nav-common:nth-child(2) {
+    margin: 3px 0;
+}
+
+.nav-itmes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-itmes:nth-child(1) {
+    border: 0;
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+.nav-itmes a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    font-size: 14px;
+    color: #fff;
+    width: 100%;
+    /* 文字阴影 */
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.nav-itmes a:nth-child(2) {
+    border-top: 1px solid #fff;
+}
+
+.nav-itmes:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #ff694f, #ff9c46);
+}
+
+.nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #448eef, #46b3ef);
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #26b2a4, #eff2ef);
+}
+
+
+/* 侧导航栏 */
+
+.subnav-entry {
+    display: flex;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.subnav-entry li {
+    /* 里面的子盒子可以写%，相对于父级的% */
+    flex: 20%;
+}
+
+.subnav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subnav-entry-icon {
+    width: 28px;
+    height: 28px;
+    margin-top: 4px;
+    background-color: pink;
+    background: url(../images/subnav-bg.png) no-repeat;
+    background-size: 28px auto;
+}
+
+
+/* sales-box  */
+
+.sales-box {
+    border-top: 1px solid #bbb;
+    background-color: #fff;
+    margin: 4px;
+}
+
+.sales-hd {
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2 {
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.sales-hd h2::after {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    content: "";
+    width: 79px;
+    height: 15px;
+    /* background-color: pink; */
+    background: url(../images/hot.png) no-repeat 0 -20px;
+    background-size: 79px auto;
+}
+
+.more {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 12px;
+    border-radius: 15px;
+    color: #fff;
+    padding: 3px 20px 3px 10px;
+    background: -webkit-linear-gradient(left, blue, skyblue);
+}
+
+.more::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #eee;
+}
+
+.row a img {
+    width: 100%;
 }
