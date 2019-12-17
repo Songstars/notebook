@@ -1,0 +1,85 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    font-size: .333333rem;
+}
+
+
+/* cssrem  插件默认HTML大小是cssroot 16px */
+
+
+/* img {
+    width: 5.25rem;
+    height: 1rem;
+    width: 1rem;
+} */
+
+
+/* 如果我们的屏幕超过750px  那么我们就按照750px设计稿  不会让我们的页面超出10rem */
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 75px!important;
+    }
+}
+
+
+/* search-content */
+
+.search-content {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 1.173333rem;
+    background-color: #ffc001;
+}
+
+.classify {
+    width: .586667rem;
+    height: .933333rem;
+    /* background-color: pink; */
+    background: url(../images/classify.png) no-repeat;
+    box-sizing: .586667rem .933333rem;
+    margin: .146667rem .333333rem .133333rem;
+}
+
+.search {
+    flex: 1;
+    /* background-color: pink; */
+}
+
+.search input {
+    width: 100%;
+    outline: none;
+    border: 0;
+    height: .88rem;
+    font-size: .333333rem;
+    background-color: #fff2cc;
+    margin-top: .133333rem;
+    padding-left: .733333rem;
+    color: #757575;
+    border-radius: .4rem;
+}
+
+.login {
+    width: 1rem;
+    height: .933333rem;
+    line-height: .933333rem;
+    /* background-color: red; */
+    margin: .1333333rem;
+    color: #fff;
+    text-align: center;
+    font-size: .333333rem;
+}
