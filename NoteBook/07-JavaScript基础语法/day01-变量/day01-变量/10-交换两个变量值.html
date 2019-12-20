@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // js 是一种编程语言  有很强的的逻辑性在里面:实现这个要求思路 先怎么做后怎么做
+        // 1.我们需要一个临时变量帮我们
+        // 2.把apple1给临时变量给temp
+        // 3.把apple2里面的苹果给apple1
+        // 4.我们把临时变量里面的值给apple2
+        var temp;
+        // 我们定义了一个临时变量为空
+        var apple1 = '青苹果';
+        var apple2 = '红苹果';
+        temp = apple1;
+        apple1 = apple2;
+        apple2 = temp;
+        console.log(apple1, apple2)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
