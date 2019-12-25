@@ -8,8 +8,14 @@
     <title>Document</title>
     <script>
         var time = prompt('请输入现在的时间');
-        if (time >= 6 && time <= 12) {
+        if (time >= 5 && time <= 12) {
             alert('上午好');
+        } else if (time >= 12 && time <= 18) {
+            alert('下午好');
+        } else if (time >= 18 && time <= 24) {
+            alert('晚上好');
+        } else {
+            alert('午夜好 真棒！');
         }
     </script>
 </head>
