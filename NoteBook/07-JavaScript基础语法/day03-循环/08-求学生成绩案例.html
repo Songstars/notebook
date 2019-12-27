@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var num = prompt('请输入班级总人数');
+        var sum = 0;
+        var average = 0;
+        for (var i = 1; i <= num; i++) {
+            var mark = prompt('请输入第' + i + '个学生的分数');
+            //因为从prompt取过来的数据是字符串型  所有需要转换成数字型
+            sum += mark * 1;
+        }
+        average = sum / num;
+        alert('班级总成绩是' + sum + '分,平均成绩是' + average + '分');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

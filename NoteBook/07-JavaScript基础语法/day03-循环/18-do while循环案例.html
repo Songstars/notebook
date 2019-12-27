@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //1.打印人的一生  从1-100岁
+        var i = 1;
+        do {
+            console.log("这个人今年" + i + "岁了");
+            i++;
+
+        } while (i <= 100)
+        //2.计算1-100之间的整数和
+        var sum = 0;
+        var j = 1;
+        do {
+            sum = sum + j;
+            j++
+        } while (j <= 100)
+        console.log(sum);
+        //3.弹出我爱你  
+        var message = prompt("你爱我吗");
+
+        do {
+
+            message = prompt("你爱我吗");
+        } while (message !== "我爱你")
+
+        alert("我也爱你");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

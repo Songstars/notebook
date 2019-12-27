@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //continue关键字  退出本次 (当前循环)  继续执行剩下的次数循环
+
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue; //只要遇到continue 就退出本次循环  知道遇到i++
+            }
+            console.log("我正在吃第" + i + "个包子");
+
+        }
+        //求1-100之间  除了 能被7整除之外的整数和
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                continue;
+            }
+            sum += i;
+        }
+        console.log(sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
