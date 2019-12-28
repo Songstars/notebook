@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1. 新增数组元素 修改length长度 
+        var arr = ["red", "green", "blue"];
+        console.log(arr.length);
+        arr.length = 5;
+        console.log(arr);
+        console.log(arr[3]);
+        console.log(arr[4]); //undefined
+        var arr1 = ["red", "green", "blue"];
+        arr1[3] = "pink";
+        console.log(arr1);
+        arr1[4] = "你好";
+        console.log(arr1);
+        arr1[5] = "中国";
+        console.log(arr1);
+        arr1[6] = "yellow";
+        console.log(arr1);
+        arr1 = "不要直接给给数组赋值 否则  数组元素都没有了";
+        console.log(arr1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
