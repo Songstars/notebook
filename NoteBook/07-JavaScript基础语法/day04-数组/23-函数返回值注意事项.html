@@ -9,6 +9,34 @@
     <script>
         // 函数返回值注意事项
         // 1. return 终止函数
+        function getSum(num1, num2) {
+            return num1 + num2;
+            alert("return 后面的代码不会执行");
+        }
+        console.log(getSum(1, 9));
+
+        // 2. return 只能返回一个值
+        function fn(num1, num2) {
+            return num1, num2;
+        }
+        console.log(fn(1, 2)); //返回结果是后面的数
+
+        // 3.  我们求任意两个数的 加减乘数结果
+        function getSums(num1, num2) {
+            return [num1 + num2, num1 - num2, num1 * num2, num1 / num2]
+        }
+        var re = getSums(1, 2);
+        console.log(re);
+        // 4. 我们的函数如果有return 则返回的是 return 后面的值，如果函数么有 return 则返回undefined
+        function fun1() {
+            return 999;
+        }
+        console.log(fun1());
+
+        function fun2() {
+
+        }
+        console.log(fun2());
     </script>
 </head>
 
