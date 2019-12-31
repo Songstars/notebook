@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1. 写一个函数，能返回传入的任意两个数字的最大值。
+        // 2. 写一个函数，能返回传入的任意三个数字的最大值。
+        // 3. 写一个函数，能判断传入的一个数值是否是质数，如果是质数返回true，如果不是质数返回false，(质数：从2开始只能被1和自身整除的数)
+        // 4. 写一个函数，能翻转传入的任意数组，并把翻转结果通过返回值返回。
+        // 5. 写一个函数，能对所有传入的数组按照从小到大进行排序，并把排序结果通过返回值返回
+        // 1 and 2
+        function getMax() {
+            for (var i = 0; i < arguments.length; i++) {
+                var max = arguments[0];
+                if (max < arguments[i]) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        console.log(getMax(1, 2));
+        console.log(getMax(1, 2, 3));
+
+
+        //3
+        function prime(num) {
+            var flag = false;
+            var j = 0;
+            for (var i = 1; i <= num; i++)
+                if (num % i == 0) {
+                    j++;
+
+                }
+            if (j <= 2) {
+                flag = true;
+            }
+            return flag;
+        }
+        console.log(prime(2));
+        console.log(prime(3));
+        console.log(prime(4));
+
+
+        ///     // 4. 写一个函数，能翻转传入的任意数组，并把翻转结果通过返回值返回。
+        var newAll = [];
+
+        function myReverse(arr) {
+            for (var i = arr.length - 1; i >= 0; i--) {
+                newAll[newAll.length] = arr[i];
+            }
+            return newAll;
+        }
+        var re = myReverse([1, 2, 3, 4, 5, "你好"]);
+        console.log(re);
+
+        // 5. 写一个函数，能对所有传入的数组按照从小到大进行排序，并把排序结果通过返回值返回
+        function mySort(arr1) {
+            for (var i = 0; i < arr1.length; i++) {
+                for (var j = 0; j < arr1.length - i - 1; j++) { // 里面的循环管 每一趟的交换次数
+                    if (arr1[j] > arr1[j + 1]) {
+                        var temp = arr1[j];
+                        arr1[j] = arr1[j + 1];
+                        arr1[j + 1] = temp;
+                    }
+                }
+
+            }
+            return arr1;
+        }
+        console.log(mySort([9, 5, 6, 1, 2, 4, 3]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

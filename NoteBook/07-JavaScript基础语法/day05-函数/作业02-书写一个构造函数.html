@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script>
+        // 书写一个构造函数，用来创建学生对象，
+        // 学生对象包括的内容有：姓名（name）、学号（id）、性别（sex）、年级（grade）、打招呼（sayHi）—— 
+        // 在弹出框中提示：“你好我是XXX”，其中XXX代表对象的name属性值
+        function Student(name, id, sex, grade) {
+            this.name = name;
+            this.id = id;
+            this.sex = sex;
+            this.grade = grade;
+            this.sayHi = function() {
+                alert("您好我是" + name);
+            }
+        }
+        var stu = new Student("小明", 2016, "男", "6班");
+        stu.sayHi();
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

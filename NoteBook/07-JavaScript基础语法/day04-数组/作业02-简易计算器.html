@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //     题目描述：
+
+        // - 用户在弹出的输入框中选择要做的运算
+        // - 用户选择后弹出两个输入框，让用户输入数据
+        // - 根据用户选择的操作和输入的数据，计算出最后结果并弹出提示框显示结果
+        // - 操作界面如下：
+        while (true) {
+            var calu = prompt("欢迎使用简易计算器：\n1.加法运算：\n2.减法运算：\n3.乘法运算：\n4.除法运算：\n5.退出\n请输入您的选项：");
+            if (calu == "1") {
+                var num1 = prompt("请输入第一个数字");
+                var num2 = prompt("请输入第二个数字");
+                var result = num1 * 1 + num2 * 1;
+                alert("运算结果是:" + result);
+            } else if (calu == "2") {
+                var num1 = prompt("请输入第一个数字");
+                var num2 = prompt("请输入第二个数字");
+                var result = num1 * 1 - num2 * 1;
+                alert("运算结果是" + result);
+            } else if (calu == "3") {
+                var num1 = prompt("请输入第一个数字");
+                var num2 = prompt("请输入第二个数字");
+                var result = num1 * 1 * num2 * 1;
+                alert("运算结果是" + result);
+            } else if (calu == "4") {
+                var num1 = prompt("请输入第一个数字");
+                var num2 = prompt("请输入第二个数字");
+                var result = num1 * 1 / num2 * 1;
+                alert("运算结果是" + result);
+            } else {
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

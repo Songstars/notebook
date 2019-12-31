@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //     题目描述：
+
+        // - 里面现存有  100 块钱。
+        // - 如果存钱，就用输入钱数加上先存的钱数, 之后弹出显示余额提示框
+        // - 如果取钱，就减去取的钱数，之后弹出显示余额提示框
+        // - 如果显示余额，就输出余额
+        // - 如果退出，弹出退出信息提示框
+        //   操作界面如下
+        while (1) {
+
+            var atm = prompt("请输入你要做的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出");
+            if (atm == "1") {
+                var all = 100; //里面现存有  100 块钱
+                var cun = prompt("请输入你要存入金额：");
+                all += cun * 1; //现在一共有多少钱
+                alert("您的余额为" + all + "元");
+            } else if (atm == "2") {
+                var qu = prompt("请输入你要取出金额：");
+                all -= qu * 1;
+                alert("您的余额为" + all + "元");
+            } else if (atm == "3") {
+                alert("您的余额为：" + all + "元");
+            } else {
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

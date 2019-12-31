@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //     1.1 求100以内所有能被3和7整除的数的和
+
+        // - 题目描述：
+        //   - 把1-100之间所有能够被3和7同时整除的数找出来，计算累加和
+        // - 题目提示：
+        //   - 在算入累加和之前，使用%判定遍历到的数字是不是可以被3和7整除
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 7 == 0) {
+                sum += i;
+            }
+        }
+        console.log(sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

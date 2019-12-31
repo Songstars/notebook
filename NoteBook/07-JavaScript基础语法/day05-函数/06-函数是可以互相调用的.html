@@ -7,6 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
+        function fun1() {
+            console.log(11);
+            fun2();
+
+        }
+        fun1();
+
+        function fun2() {
+            console.log(22);
+        }
+
+        function fn1() {
+            console.log(111);
+            fn2();
+            console.log("fn1");
+
+        }
+
+        function fn2() {
+            console.log(222);
+            console.log("fn2");
+
+        }
+        fn1();
     </script>
 </head>
 
