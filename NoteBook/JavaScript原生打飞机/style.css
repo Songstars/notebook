@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    position: relative;
+    width: 320px;
+    height: 568px;
+    /* background: url(ks.png); */
+    margin: 0 auto;
+}
+
+
+/* 进入游戏界面 */
+
+#gameStart {
+    /* display: none; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(image/开始背景.png);
+    /* background-color: pink; */
+}
+
+#gameStart span {
+    position: absolute;
+    left: 80px;
+    bottom: 200px;
+    display: block;
+    width: 160px;
+    height: 40px;
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #ccc;
+    border: 4px solid #666;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+#gameStart span:hover {
+    color: #fff;
+}
+
+
+/* 进入游戏 start*/
+
+#gameEnter {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url(image/background_1.png);
+    /* background-color: skyblue; */
+}
+
+#myPlane {
+    position: absolute;
+    left: 127px;
+    bottom: 0;
+    width: 66px;
+    height: 80px;
+    cursor: pointer;
+}
+
+#myPlane img {
+    width: 66px;
+    height: 80px;
+    cursor: move;
+}
+
+
+/* 进入游戏 end*/
+
+
+/* 子弹  */
+
+#bullets,
+#enemys {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.b {
+    position: absolute;
+    /* left: 157px;
+    top: 474px; */
+    width: 6px;
+    height: 14px;
+}
