@@ -36,8 +36,10 @@ window.onload = function() {
     // 声明需要使用的全局变量
     var gameStatus = false; //当前的游戏状态
     var a = null; //创建子弹的定时器
+    var b = null; //敌机的变量
     var bulletW = 6;
     var bulletH = 14;
+
 
 
     // 开始游戏
@@ -54,6 +56,7 @@ window.onload = function() {
                         //开始游戏
                         this.onmousemove = myPlaneMove;
                         shot();
+                        appearEnemy();
                     } else {
                         //结束游戏
                         this.onmousemove = null;
@@ -63,7 +66,7 @@ window.onload = function() {
 
             }
         }
-        // 乙方飞机的移动
+        // 自己方飞机的移动
     function myPlaneMove(evt) {
         var e = evt || window.event;
         var mouse_x = e.x || e.pageX;
@@ -88,12 +91,13 @@ window.onload = function() {
     }
     //单位时间内创建子弹
     function shot() {
+        if (a) return; //如果a存在 不再创建a
         a = setInterval(function() {
             //创建子弹
             creatBullet();
         }, 100);
     }
-    // 制造子弹f
+    // 制造子弹
     function creatBullet() {
         // var bullet = new Image(bulletW, bulletH);
         var bullet = new Image();
@@ -108,5 +112,99 @@ window.onload = function() {
         bullet.style.left = bulletL + "PX";
         bullet.style.top = bulletT + "PX";
         bulletsP.appendChild(bullet);
+        move(bullet, "top");
+    }
+
+    // 子弹的运动:运动函数(迅速运动)
+    function move(ele, attr) {
+        var speed = -8;
+        ele.timer = setInterval(function() {
+            var moveval = getStyle(ele, attr);
+            // 子弹的top值是负数 删除子弹  清除定时器
+            if (moveval <= -bulletH) {
+                clearInterval(ele.timer);
+                ele.parentNode.removeChild(ele);
+            } else {
+                ele.style[attr] = moveval + speed + "px";
+            }
+        }, 10);
+
+    }
+
+
+    //创建敌机数据对象
+    var enemyObj = {
+        enemy1: {
+            width: 34,
+            height: 24,
+            score: 100,
+            hp: 100
+        },
+        enemy2: {
+            width: 46,
+            height: 60,
+            score: 500,
+            hp: 500
+        },
+        enemy3: {
+            width: 110,
+            height: 164,
+            score: 1000,
+            hp: 1000
+        }
+    }
+
+    // 创建敌机的定时器
+    function appearEnemy() {
+        if (b) return;
+        b = setInterval(function() {
+            creatEnemy();
+        }, 1000);
+    }
+
+
+    // 制造敌机的函数
+    function creatEnemy() {
+        // 敌机出现概率的数据
+        var percentData = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3];
+        // 敌机的类型
+        var enemyType = percentData[Math.floor(Math.random() * percentData.length)];
+        // 得到当前随机敌机的数据
+        var enemyData = enemyObj["enemy" + enemyType];
+        // 创建敌机所在的元素
+        var enemy = new Image(enemyData.width, enemyData.height);
+        enemy.t = enemyType;
+        enemy.src = "image/enemy" + enemyType + ".png";
+        enemy.score = enemyData.hp;
+        // 确定当前敌机出现的位置
+        var enemyL = Math.floor(Math.random() * (gameW - enemyData.width + 1));
+        var enemyT = -enemyData.height;
+        enemy.className = "en";
+        enemy.style.left = enemyL + "px";
+        enemy.style.top = enemyT + "px";
+        enemysP.appendChild(enemy);
+        enemyMove(enemy, "top");
+    }
+
+
+    //敌机的运动
+    function enemyMove(ele, attr) {
+        var speed;
+        if (ele.t === 1) {
+            speed = 1.5;
+        } else if (ele.t === 3) {
+            speed = 1;
+        } else {
+            speed = 0.5;
+        }
+
+        ele.timer = setInterval(function() {
+            var moveVal = getStyle(ele, attr);
+            if (moveVal >= gameH) {
+                clearInterval(ele.timer);
+            } else {
+                ele.style[attr] = moveVal + speed + "px";
+            }
+        }, 10);
     }
 }

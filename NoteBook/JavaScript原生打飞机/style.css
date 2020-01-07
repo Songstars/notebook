@@ -8,7 +8,8 @@
     width: 320px;
     height: 568px;
     /* background: url(ks.png); */
-    margin: 0 auto;
+    margin: 100px auto;
+    overflow: hidden;
 }
 
 
@@ -92,4 +93,11 @@
     top: 474px; */
     width: 6px;
     height: 14px;
+}
+
+
+/* //敌机最开始出现的位置 */
+
+.en {
+    position: absolute;
 }
