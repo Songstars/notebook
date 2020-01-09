@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 题目描述：制作一个函数，getDayNum( 年月日日期 )，可以返回指定日期是当前年的第几天
+
+        // 例：  getDayNum( “2019-1-2”)    返回值为：2
+        function getDayNum(date) {
+            var date1 = new Date(date);
+            // console.log(date1);
+            // 1. 获取年月日
+            var year = date1.getFullYear();
+            console.log(year);
+            var month = date1.getMonth() + 1;
+            console.log(month);
+            var day = date1.getDate();
+            console.log(day);
+
+            var dayNum = 0; //日期是当前年的第几天
+            // 2. 判断是不是闰年
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                var February = 29;
+            } else {
+                var February = 28;
+            }
+            // 3. 判断月份有多少天 30or31or 29 or 28
+            // if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+
+            // }
+            switch (month) {
+                case 12:
+                    dayNum = 31 + February + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + day;
+                    break;
+                case 11:
+                    dayNum = 31 + February + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + day;
+                    break;
+                case 10:
+                    dayNum = 31 + February + 31 + 30 + 31 + 30 + 31 + 31 + 30 + day;
+                    break;
+                case 9:
+                    dayNum = 31 + February + 31 + 30 + 31 + 30 + 31 + 31 + day;
+                    break;
+                case 8:
+                    dayNum = 31 + February + 31 + 30 + 31 + 30 + 31 + day;
+                    break;
+                case 7:
+                    dayNum = 31 + February + 31 + 30 + 31 + 30 + day;
+                    break;
+                case 6:
+                    dayNum = 31 + February + 31 + 30 + 31 + day;
+                    break;
+                case 5:
+                    dayNum = 31 + February + 31 + 30 + day;
+                    break;
+                case 4:
+                    dayNum = 31 + February + 31 + day;
+                    break;
+                case 3:
+                    dayNum = 31 + February + day;
+                    break;
+                case 2:
+                    dayNum = 31 + day;
+                    break;
+                case 1:
+                    dayNum = day;
+            }
+            // 4. 加上这个月的日子  就是当前年的第几天 
+            return dayNum;
+
+        }
+        console.log(getDayNum("2020-3-9"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

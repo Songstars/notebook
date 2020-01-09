@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            /* background-color: pink; */
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div">
+
+    </div>
+    <script>
+        //     	题目描述：使用Math对象，制作一个16进制的随机颜色
+
+        // 题目提示：16进制包括 “ 0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F ”
+
+        // 例： “#f23a4b” 
+        var str = "0123456789ABCDEF";
+        var newstr = "";
+        for (var i = 0; i < 6; i++) {
+            var rand = Math.ceil(Math.random() * str.length);
+            newstr += str.charAt(rand);
+        }
+        newstr = "#" + newstr;
+        console.log(newstr);
+        var div = document.getElementById("div");
+        div.style.backgroundColor = newstr;
+    </script>
+</body>
+
+</html>

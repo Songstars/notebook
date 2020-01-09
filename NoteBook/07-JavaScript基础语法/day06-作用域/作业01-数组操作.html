@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 题目描述：把下面数组的首尾两个元素互换
+
+        // var arr = ["鹿晗","王俊凯","蔡徐坤","彭于晏","周杰伦","刘德华","赵本山"]；
+        var arr = ["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"];
+        var start = arr.shift();
+        var end = arr.pop();
+        arr.push(start);
+        arr.unshift(end);
+        console.log(arr);
+
+
+        // console.log(start, end);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
