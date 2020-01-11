@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        input {
+            color: #ccc;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" value="邮箱/ID/手机号">
+    </div>
+    <script>
+        // 题目描述
+
+        // 仿世纪佳缘网，显示和隐藏输入框中的提示内容，具体表现如下图：
+
+        // 1）输入框获得焦点，提示内容消失，边框变色
+
+        // 2）输入框失去焦点，如果内容为空，提示内容恢复，边框变色；如果内容不为空，只有边框变色
+
+        // 1. 获取元素
+        var inp = document.querySelector("input");
+        inp.onfocus = function() {
+            // console.log("获取焦点");
+            if (this.value === "邮箱/ID/手机号") {
+                this.value = "";
+
+                this.style.borderColor = "pink"
+            }
+        }
+        inp.onblur = function() {
+            // console.log("失去焦点")
+            if (this.value === "") {
+                this.value = "邮箱/ID/手机号";
+                // this.style.color = "black";
+            } else {
+                this.style.borderColor = "pink"
+            }
+        }
+    </script>
+</body>
+
+</html>
